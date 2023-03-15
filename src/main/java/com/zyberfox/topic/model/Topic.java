@@ -1,4 +1,4 @@
-package topic.model;
+package com.zyberfox.topic.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

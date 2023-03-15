@@ -1,8 +1,8 @@
-package topic.controller;
+package com.zyberfox.topic.controller;
 
 import org.springframework.web.bind.annotation.*;
-import topic.model.Topic;
-import topic.service.TopicService;
+import com.zyberfox.topic.model.Topic;
+import com.zyberfox.topic.service.TopicService;
 
 import java.util.List;
 import java.util.Optional;

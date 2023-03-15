@@ -1,6 +1,6 @@
 package com.zyberfox.course.service;
 
-import com.zyberfox.course.repository.TopicRepository;
+import com.zyberfox.course.repository.CourseRepository;
 import com.zyberfox.course.model.Course;
 import org.springframework.stereotype.Service;
 
@@ -9,13 +9,13 @@ import java.util.List;
 import java.util.Optional;
 
 @Service
-public class TopicService {
+public class CourseService {
 
-      TopicRepository topicRepository;
+      CourseRepository courseRepository;
 
-    public TopicService(TopicRepository topicRepository) {
+    public CourseService(CourseRepository courseRepository) {
 
-        this.topicRepository = topicRepository;
+        this.courseRepository = courseRepository;
     }
 
     /*private List<Topic> topics = new ArrayList<>(Arrays.asList(new Topic("Spring", "Framework", "Description"),
@@ -23,23 +23,23 @@ public class TopicService {
             new Topic("Javascript", "Javascript", "Description"))
     );*/
 
-    public List<Course> getAllTopics() {
-        List<Course> topics = new ArrayList<>();
+    public List<Course> getAllCourses() {
+        List<Course> courses = new ArrayList<>();
 
-        topicRepository.findAll().forEach(topics::add);
+        courseRepository.findAll().forEach(courses::add);
 
-        return topics;
+        return courses;
     }
 
-    public Optional<Course> getTopic(String id) {
-        return topicRepository.findById(id);
+    public Optional<Course> getCourse(String id) {
+        return courseRepository.findById(id);
     }
 
-    public void addTopic(Course course) {
-        topicRepository.save(course);
+    public void addCourse(Course course) {
+        courseRepository.save(course);
     }
 
-    public void updateTopic(String id, Course course) {
+    public void updateCourse(Course course) {
 //        for (int i = 0; i < topics.size(); i++) {
 //            Topic t = topics.get(i);
 //            if (t.getId().equals(id)) {
@@ -47,10 +47,10 @@ public class TopicService {
 //                return;
 //            }
 //        }
-        topicRepository.save(course);
+        courseRepository.save(course);
     }
 
-    public void deleteTopic(String id) {
-        topicRepository.deleteById(id);
+    public void deleteCourse(String id) {
+        courseRepository.deleteById(id);
     }
 }

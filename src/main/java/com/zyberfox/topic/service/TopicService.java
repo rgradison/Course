@@ -1,8 +1,8 @@
-package topic.service;
+package com.zyberfox.topic.service;
 
 import org.springframework.stereotype.Service;
-import topic.model.Topic;
-import topic.repository.TopicRepository;
+import com.zyberfox.topic.model.Topic;
+import com.zyberfox.topic.repository.TopicRepository;
 
 import java.util.ArrayList;
 import java.util.List;
