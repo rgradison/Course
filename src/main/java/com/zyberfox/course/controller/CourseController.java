@@ -17,8 +17,8 @@ public class CourseController {
         this.courseService = courseService;
     }
     @RequestMapping("/topics/{id}/courses")
-    public List<Course> allCourse() {
-        return courseService.getAllCourses();
+    public List<Course> allCourse(@PathVariable String id) {
+        return courseService.getAllCourses(id);
     }
     //Not recommended
     //OR @RequestMapping("/topics/{foo}") then public Topic getTopic(@PathVariable("foo") String id) {

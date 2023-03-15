@@ -1,4 +1,4 @@
-package com.zyberfox.course;
+package com.zyberfox;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
